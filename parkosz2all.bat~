@@ -1,0 +1,22 @@
+echo djvused
+tools/djvused ParkoszJBCfinal.djvu  -v -u -e 'print-txt' > ParkoszJBCfinal.csv
+echo "Removing composed entries"
+grep -v \&\&  ParkoszJBCfinal.csv| grep -v ";+" > ParkoszJBC-su.csv
+echo "Generating snippets extraction"
+sed "s/.\+;file:\(.*\)[.]djvu[?]djvuopts=&page=\([0-9]\+\)&highlight=\([0-9]\+\),\([0-9]\+\),\([0-9]\+\),\([0-9]\+\);.\+\'/ddjvu -format=ppm -page=\2 -segment=\5x\6+\3+\4 \1.djvu imgtmp\/snippet_\1_page\2x\3y\4.ppm/" ParkoszJBC-su.csv > ParkoszJBC_ddjvu.bat
+echo "Executing snippets extration"
+source ParkoszJBC_ddjvu.bat
+echo "Generating LateX commands - phase 1"
+sed "s/\(.\+\);file:\(.*\)[.]djvu[?]djvuopts=&page=\([0-9]\+\)&highlight=\([0-9]\+\),\([0-9]\+\),\([0-9]\+\),\([0-9]\+\);.\+\'/\\\\includegraphics[height=3ex]{snippets\/snippet_\2_page\3x\4y\5} % \1/" ParkoszJBC-su.csv > ParkoszJBC__tex.txt
+echo "Generating LateX commands - phase 2"
+sed '
+/>$/ {
+# append a line
+	N
+	s/} %.\+\n/}/
+}' ParkoszJBC__tex.txt > ParkoszJBC.tex.
+cd imgtmp
+echo "Converting snippets"
+convert *.ppm -set filename: "%t" %[filename:].png
+echo "Moving snippets"
+# cp *.png ~/git/Parkosz-robocze/XeLaTeX/test/snippets/

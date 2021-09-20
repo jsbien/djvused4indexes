@@ -1,0 +1,9 @@
+jsbien@JSBbuster:~/work/djvu-djvulibre-4index$ tools/djvused -v -u -e   'print-txt' Zaborowski_1_wyd_words.djvu > Zaborowski_1_wyd_words.csv
+djvused: type "help" to see available commands.
+djvused: ok.
+djvused: ok.
+jsbien@JSBbuster:~/work/djvu-djvulibre-4index$ tools/djvused -v -u -e   'print-txt' Zaborowski_Polona_words.djvu > Zaborowski_Polona_words.csv
+djvused: type "help" to see available commands.
+djvused: ok.
+djvused: ok.
+jsbien@JSBbuster:~/work/djvu-djvulibre-4index$ 
