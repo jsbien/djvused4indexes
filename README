@@ -1,3 +1,12 @@
+This is a quick and dirty modification of  djvused for creating indexes for djview4poliqarp.
+The meaning of the 'print-txt' command is changed to produce an index.
+
+The modification was made by Janusz S. Bień <jsbien@uw.edu.pl> (https://orcid.org/0000-0001-5006-8183)
+in 2021.
+
+There is no intention to improve or further develop the program, but
+volunteers willing to take over this task are welcomed.
+
 
 1- WHAT IS DJVU.
 ================
