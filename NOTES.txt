@@ -26,3 +26,12 @@ JSB:
 
 Accept autodetected source files that will be included in the project.
 
+BUG?:
+
+Pojedyncza strona w ParkoszJBCbug_words.djvu konwertuje się poprawnie
+
+Cały tekst konwertuje się źle  - pliki mi gdzies zginęły.
+
+
+
+ 
