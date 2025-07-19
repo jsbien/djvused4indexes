@@ -1,0 +1,28 @@
+From README
+
+Note that there will be no configure file if you obtain the djvulibre 
+source using git clone. Instead there is a script 'autogen.sh' that 
+uses automake to generate and call the actual configure script.
+Since all autogen.sh arguments will be passed to configure,
+you can simply treat autogen.sh as a replacement for configure.
+
+...
+
+You can then perform the compilation by typing 
+
+        $ make
+
+From Trufanov
+
+Now we can import the Makefile based into Qt Creator as usual.
+
+File/New file or project/Import project/Import Existing project...
+
+JSB                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+Choose uniq new project name and specify the path to the folder with djvulibre's Makefile.
+
+JSB: 
+
+Accept autodetected source files that will be included in the project.
+
