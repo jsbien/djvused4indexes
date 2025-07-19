@@ -1,7 +1,0 @@
-Pojedyncza strona w ParkoszJBCbug_words.djvu konwertuje się poprawnie
-
-Cały tekst konwertuje się źle  - pliki mi gdzies zginęły.
-
-
-
- 
